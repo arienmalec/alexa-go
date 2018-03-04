@@ -1,5 +1,15 @@
 package alexa
 
+// constants
+
+const (
+	//HelpIntent is the Alexa built-in Help Intent
+	HelpIntent = "AMAZON.HelpIntent"
+
+	//CancelIntent is the Alexa built-in Cancel Intent
+	CancelIntent = "AMAZON.CancelIntent"
+)
+
 // request
 
 // Request is an Alexa skill request
