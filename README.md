@@ -1,4 +1,5 @@
 # Go Request/Response Helpers for Alexa Skill Services
+
 ### Install
 
 ```console
@@ -28,3 +29,8 @@ func main() {
 	lambda.Start(Handler)
 }
 ```
+
+### Credits
+
+Request/Response struct layout influenced by` `https://github.com/mikeflynn/go-alexa` which was written before Go was an AWS Lambda native language.
+
