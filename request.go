@@ -96,6 +96,7 @@ type ReqBody struct {
 	Type      string `json:"type"`
 	RequestID string `json:"requestId"`
 	Timestamp string `json:"timestamp"`
+	Locale    string `json:"locale"`
 	Intent    Intent `json:"intent,omitempty"`
 	Reason    string `json:"reason,omitempty"`
 }
