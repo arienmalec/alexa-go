@@ -2,6 +2,7 @@ package alexa
 
 // constants
 
+// built in intents
 const (
 	//HelpIntent is the Alexa built-in Help Intent
 	HelpIntent = "AMAZON.HelpIntent"
@@ -9,6 +10,48 @@ const (
 	//CancelIntent is the Alexa built-in Cancel Intent
 	CancelIntent = "AMAZON.CancelIntent"
 )
+
+// locales
+const (
+
+	// LocaleGerman is the locale for standard dialect German
+	LocaleGerman = "de-DE"
+
+	// LocaleAustralianEnglish is the locale for Australian English
+	LocaleAustralianEnglish = "en-AU"
+
+	//LocaleCanadianEnglish is the locale for Canadian English
+	LocaleCanadianEnglish = "en-CA"
+
+	//LocaleBritishEnglish is the locale for UK English
+	LocaleBritishEnglish = "en-GB"
+
+	//LocaleIndianEnglish is the locale for Indian English
+	LocaleIndianEnglish = "en-IN"
+
+	//LocaleAmericanEnglish is the locale for American English
+	LocaleAmericanEnglish = "en-US"
+
+	// LocaleJapanese is the locale for Japanese
+	LocaleJapanese = "ja-JP"
+)
+
+func isEnglish(locale string) bool {
+	switch locale {
+	case LocaleAmericanEnglish:
+		return true
+	case LocaleIndianEnglish:
+		return true
+	case LocaleBritishEnglish:
+		return true
+	case LocaleCanadianEnglish:
+		return true
+	case LocaleAustralianEnglish:
+		return true
+	default:
+		return false
+	}
+}
 
 // request
 
