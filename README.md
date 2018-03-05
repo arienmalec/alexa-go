@@ -32,5 +32,5 @@ func main() {
 
 ### Credits
 
-Request/Response struct layout influenced by` `https://github.com/mikeflynn/go-alexa` which was written before Go was an AWS Lambda native language.
+Request/Response struct layout influenced by `https://github.com/mikeflynn/go-alexa` which was written before Go was an AWS Lambda native language.
 
