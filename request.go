@@ -13,6 +13,8 @@ const (
 
 // locales
 const (
+	// LocaleItalian is the locale for Italian
+	LocaleItalian = "it-IT"
 
 	// LocaleGerman is the locale for standard dialect German
 	LocaleGerman = "de-DE"
