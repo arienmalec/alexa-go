@@ -38,7 +38,7 @@ const (
 	LocaleJapanese = "ja-JP"
 )
 
-func isEnglish(locale string) bool {
+func IsEnglish(locale string) bool {
 	switch locale {
 	case LocaleAmericanEnglish:
 		return true
@@ -111,6 +111,18 @@ type Intent struct {
 
 // Slot is an Alexa skill slot
 type Slot struct {
-	Name  string `json:"name"`
-	Value string `json:"value"`
+	Name  			  string `json:"name"`
+	Value 			  string `json:"value"`
+	Resolutions  Resolutions `json:"resolutions"`
+}
+
+type Resolutions struct {
+	ResolutionPerAuthority []struct{
+		Values []struct{
+			Value struct{
+				Name string `json:"name"`
+				Id   string `json:"id"`
+			} `json:"value"`
+		} `json:"values"`
+	} `json:"resolutionsPerAuthority"`
 }

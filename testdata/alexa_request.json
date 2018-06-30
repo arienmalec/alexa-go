@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "session": {
+    "new": true,
+    "sessionId": "sessionId",
+    "application": {
+      "applicationId": "amzn1.ask.skill.someSkill"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.some-account"
+    }
+  },
+  "context": {
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.3ebe6200-6118-4ec5-ada0-a57edfad3818"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.user-id"
+      },
+      "device": {
+        "deviceId": "amzn1.ask.device.device-id",
+        "supportedInterfaces": {}
+      },
+      "apiEndpoint": "https://api.amazonalexa.com",
+      "apiAccessToken": "api-token"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "amzn1.echo-api.request.request-id",
+    "timestamp": "2018-06-30T16:34:34Z",
+    "locale": "it-IT",
+    "intent": {
+      "name": "Intent-Name",
+      "confirmationStatus": "NONE",
+      "slots": {
+        "SLOT_NAME": {
+          "name": "SLOT_NAME",
+          "resolutions": {
+            "resolutionsPerAuthority": [
+              {
+                "authority": "AUTH-1",
+                "status": {
+                  "code": "ER_SUCCESS_MATCH"
+                },
+                "values": [
+                  {
+                    "value": {
+                      "name": "SLOT_VALUE_0",
+                      "id": "0"
+                    }
+                  },
+                  {
+                    "value": {
+                      "name": "SLOT_VALUE_1",
+                      "id": "1"
+                    }
+                  }
+
+                ]
+              }
+            ]
+          },
+          "confirmationStatus": "NONE"
+        }
+      }
+    }
+  }
+}
