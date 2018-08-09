@@ -99,6 +99,7 @@ type ReqBody struct {
 	Locale    string `json:"locale"`
 	Intent    Intent `json:"intent,omitempty"`
 	Reason    string `json:"reason,omitempty"`
+	DialogState string `json:"dialogState,omitempty"`
 }
 
 // Intent is the Alexa skill intent
