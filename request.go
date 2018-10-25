@@ -9,6 +9,9 @@ const (
 
 	//CancelIntent is the Alexa built-in Cancel Intent
 	CancelIntent = "AMAZON.CancelIntent"
+
+	//StopIntent is the Alexa built-in Stop Intent
+	StopIntent = "AMAZON.StopIntent"
 )
 
 // locales
