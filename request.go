@@ -87,7 +87,8 @@ type Session struct {
 type Context struct {
 	System struct {
 		APIAccessToken string `json:"apiAccessToken"`
-		Device         struct {
+		APIEndpoint string `json:"apiEndpoint"`
+                Device         struct {
 			DeviceID string `json:"deviceId,omitempty"`
 		} `json:"device,omitempty"`
 		Application struct {
