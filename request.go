@@ -12,6 +12,12 @@ const (
 
 	//StopIntent is the Alexa built-in Stop Intent
 	StopIntent = "AMAZON.StopIntent"
+	
+	//FallbackIntent is the Alexa built-in Fallback Intent
+	FallbackIntent = "AMAZON.FallbackIntent"
+	
+	//NavigateHomeIntent is the Alexa built-in Navigate Home Intent
+	NavigateHomeIntent = "AMAZON.NavigateHomeIntent"
 )
 
 // locales
