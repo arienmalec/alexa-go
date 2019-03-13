@@ -16,6 +16,9 @@ const (
 
 // locales
 const (
+	// LocaleFrench is the locale for French
+	LocaleFrench = "fr-FR"
+
 	// LocaleItalian is the locale for Italian
 	LocaleItalian = "it-IT"
 
