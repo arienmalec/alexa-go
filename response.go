@@ -47,7 +47,7 @@ type Reprompt struct {
 type Directives struct {
 	Type          string         `json:"type,omitempty"`
 	SlotToElicit  string         `json:"slotToElicit,omitempty"`
-	UpdatedIntent *UpdatedIntent `json:"UpdatedIntent,omitempty"`
+	UpdatedIntent *UpdatedIntent `json:"updatedIntent,omitempty"`
 	PlayBehavior  string         `json:"playBehavior,omitempty"`
 	AudioItem     struct {
 		Stream struct {
