@@ -89,6 +89,7 @@ type Context struct {
 		APIAccessToken string `json:"apiAccessToken"`
 		Device         struct {
 			DeviceID string `json:"deviceId,omitempty"`
+			SupportedInterfaces *SupportedInterfaces `json:"supportedInterfaces,omitempty"`
 		} `json:"device,omitempty"`
 		Application struct {
 			ApplicationID string `json:"applicationId,omitempty"`
@@ -96,6 +97,11 @@ type Context struct {
 	} `json:"System,omitempty"`
 }
 
+type SupportedInterfaces struct {
+	Display interface{} `json:"Display,omitempty"`
+	AudioPlayer interface{} `json:"AudioPlayer,omitempty"`
+	VideoApp interface{} `json:"VideoApp,omitempty"`
+}
 // ReqBody is the actual request information
 type ReqBody struct {
 	Type      string `json:"type"`
