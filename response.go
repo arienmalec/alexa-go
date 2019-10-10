@@ -59,6 +59,15 @@ type Directives struct {
 	Template interface{} `json:"template,omitempty"`
 }
 
+type BodyTemplate struct {
+	Type string `json:"type"`
+	Token string `json:"token,omitempty"`
+	BackButton string `json:"backButton"`
+	BackgroundImage *ImageTemplate `json:"backgroundImage,omitempty"`
+	Image *ImageTemplate `json:"image,omitempty"`
+	TextContext *TextContext `json:"textContent"`
+}
+
 type ListTemplate struct {
 	Type string `json:"type"`
 	Token string `json:"token,omitempty"`
