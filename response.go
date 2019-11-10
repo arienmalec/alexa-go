@@ -47,7 +47,7 @@ type Reprompt struct {
 type Directives struct {
 	Type          string         `json:"type,omitempty"`
 	SlotToElicit  string         `json:"slotToElicit,omitempty"`
-	UpdatedIntent *UpdatedIntent `json:"UpdatedIntent,omitempty"`
+	UpdatedIntent *UpdatedIntent `json:"updatedIntent,omitempty"`
 	PlayBehavior  string         `json:"playBehavior,omitempty"`
 	AudioItem     struct {
 		Stream struct {
@@ -56,6 +56,54 @@ type Directives struct {
 			OffsetInMilliseconds int    `json:"offsetInMilliseconds,omitempty"`
 		} `json:"stream,omitempty"`
 	} `json:"audioItem,omitempty"`
+	Template interface{} `json:"template,omitempty"`
+}
+
+type BodyTemplate struct {
+	Type string `json:"type"`
+	Token string `json:"token,omitempty"`
+	BackButton string `json:"backButton"`
+	BackgroundImage *ImageTemplate `json:"backgroundImage,omitempty"`
+	Image *ImageTemplate `json:"image,omitempty"`
+	TextContext *TextContext `json:"textContent"`
+}
+
+type ListTemplate struct {
+	Type string `json:"type"`
+	Token string `json:"token,omitempty"`
+	BackButton string `json:"backButton"`
+	BackgroundImage *ImageTemplate `json:"backgroundImage,omitempty"`
+	Title string `json:"title"`
+	ListItems *[]ListItems `json:"listItems"`
+}
+
+type ListItems struct {
+	Token string `json:"token,omitempty"`
+	Image *ImageTemplate `json:"image,omitempty"`
+	TextContent *TextContext `json:"textContent"`
+}
+
+type ImageTemplate struct {
+	ContentDescription string `json:"contentDescription,omitempty"`
+	Sources *[]ImageTemplateSources `json:"sources,omitempty"`
+}
+
+type ImageTemplateSources struct {
+	Url string `json:"url"`
+	Size string `json:"size,omitempty"`
+	WidthPixels int `json:"widthPixels,omitempty"`
+	HeightPixels int `json:"heightPixels,omitempty"`
+}
+
+type TextContext struct {
+	PrimaryText *TextField `json:"primaryText,omitempty"`
+	SecondaryText *TextField `json:"secondaryText,omitempty"`
+	TertiaryText *TextField `json:"tertiaryText,omitempty"`
+}
+
+type TextField struct {
+	Type string `json:"type"`
+	Text string `json:"text"`
 }
 
 // UpdatedIntent is to update the Intent
